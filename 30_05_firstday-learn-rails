@@ -1,0 +1,44 @@
+BEGINNING RAILS
+1. creating a new application
+$ rails new blog
+
+2. open a project in a sublime text
+vào vị trí project cần mở -> subl .
+
+3. starting up the Web Server
+$ rails server 
+run localhost:3000
+
+4. say "Hello", Rails
+A controller : receive specific requests for the application
+Routing: decides which controller receives which requests.
+A view: display information in a human readable format
+
+-> to create a new controller called "Welcome" with an action called "index"
+$rails generate controller Welcome index
+
+5. resources method
+Rails provides a resources method which can be used to declare a standard REST resource.
+
+6. The first form
+The primary form builder for Rails is provided by a method called form_with
+The fomr needs to use a different URL in order to go somewhere else. 
+use "url:articles_path" 
+articles_path helps the form send a POST request to that route(create action)
+
+7. Creating articles
+the render method: take hash with a key of :plain and value of params[:article].inspect
+
+8. Creating the Article model
+rails generate model Article title: string text: text
+
+9. Running a Migration
+	generate model created a database migration file inside the db/migrate directory -> Migrations are designed to make it simple to create and modify database tables. 
+
+---> run migration: rails db:migrate
+
+References: http://guides.rubyonrails.org/getting_started.html
+
+References: https://www.railstutorial.org/book/beginning
+
+
